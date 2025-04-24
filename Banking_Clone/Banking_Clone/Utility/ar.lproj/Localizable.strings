@@ -1,0 +1,25 @@
+//
+//  Localizable.strings
+//  Banking_Clone
+//
+//  Created by Firoj-iOS-Developer on 23/04/25.
+//
+
+"welcome_message %@" = "مرحباً ٪@";
+"_statements" = "Statements";
+"_deposit" = "Deposit";
+"_manage" = "Manage";
+"saving_account" = "Saving Account";
+"account_balance" = "Account Balance";
+"top_activity" = "Top Activity";
+"_discover" = "Discover";
+"_profile" = "Profile";
+"fund_transfer" = "Fund Transfer";
+"bill_pay" = "Bill Pay";
+"_recharge" = "Recharge";
+"accounts_and_deposit" = "Accounts and deposit";
+"invest_and_insure" = "Invest and Insure";
+"_cards" = "Cards";
+"_loans" = "Loans";
+"update_aadhaar" = "Update Aadhaar";
+"online_ppf" = "Online PPF";

@@ -12,7 +12,7 @@ struct PostLoginDashboard: View {
     init() {
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithOpaqueBackground()
-        tabBarAppearance.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        tabBarAppearance.backgroundColor = UIColor.secondarySystemBackground.withAlphaComponent(1)
         UITabBar.appearance().standardAppearance = tabBarAppearance
         // For iOS 15+, set scrollEdgeAppearance too
         if #available(iOS 15.0, *) {
@@ -25,22 +25,22 @@ struct PostLoginDashboard: View {
             HomeScreen()
                 .tabItem {
                     Image(systemName: "house")
-                    Text("Home")
+                    Text("_home")
                 }
             Text("Transactions")
                 .tabItem {
                     Image(systemName: "arrowshape.left.arrowshape.right")
-                    Text("Transactions")
+                    Text("_transactions")
                 }
             Text("Settings")
                 .tabItem {
                     Image(systemName: "gearshape.fill")
-                    Text("Settings")
+                    Text("_settings")
                 }
             Text("Profile")
                 .tabItem {
                     Image(systemName: "person.circle.fill")
-                    Text("Profile")
+                    Text("_profile")
                 }
         }
     }

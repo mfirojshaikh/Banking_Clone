@@ -18,7 +18,7 @@ struct Segment: View {
                     selectedIndex = index
                     didTapOnButton(index)
                 } label: {
-                    Text(buttonTitles[index])
+                    Text(buttonTitles[index].localized())
                         .foregroundColor(Color.white)
                         .padding(.vertical, 8)
                         .frame(maxWidth: .infinity)

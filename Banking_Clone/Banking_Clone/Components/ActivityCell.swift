@@ -15,7 +15,7 @@ struct ActivityCell: View {
             Image(systemName: imageName)
                 .resizable()
                 .frame(width: 40, height: 30)
-            Text("\(text)")
+            Text(text.localized())
                 .frame(width: 90)
                 .frame(maxHeight: 60)
                 .multilineTextAlignment(.center)

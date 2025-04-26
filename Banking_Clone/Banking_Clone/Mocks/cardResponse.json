@@ -1,0 +1,23 @@
+{
+  "cards": [
+    {
+      "id": 1234567890,
+      "accountType": "Saving account",
+      "accountNumber": "1234567890",
+      "accountBalance": "$ 12345678"
+    },
+    {
+      "id": 1234567891,
+      "accountType": "Saving account",
+      "accountNumber": "1234567891",
+      "accountBalance": "$ 12345678"
+    },
+    {
+      "id": 1234567890,
+      "accountType": "Saving account",
+      "accountNumber": "1234567892",
+      "accountBalance": "$ 12345678"
+    }
+  ]
+}
+

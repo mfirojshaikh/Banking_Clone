@@ -38,7 +38,7 @@ struct DiscoverList: View {
     var body: some View {
         NavigationStack {
             ForEach(DiscoverItems.allCases, id: \.self) { item in
-                NavigationLink(destination: Text("Detail")) {
+                NavigationLink(destination: Text(item.text)) {
                     DiscoverCell(text: item.text)
                         .padding(.horizontal, 10)
                 }

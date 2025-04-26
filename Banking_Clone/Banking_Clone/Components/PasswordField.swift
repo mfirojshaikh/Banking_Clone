@@ -11,6 +11,7 @@ struct PasswordField: View {
         case digit1, digit2, digit3, digit4
     }
 
+    @Binding var wipePassword: Bool
     @State private var codeNumber1: String = ""
     @State private var codeNumber2: String = ""
     @State private var codeNumber3: String = ""
@@ -26,16 +27,30 @@ struct PasswordField: View {
             getPassCode(text: $codeNumber4, currentField: .digit4, preField: .digit3)
         }
         .frame(width: 300, height: 70)
-        .onAppear() {
-            isFocused = .digit1
-            codeNumber1 = ""
-            codeNumber2 = ""
-            codeNumber3 = ""
-            codeNumber4 = ""
+        .onChange(of: wipePassword) {
+            if wipePassword {
+                clearPassword()
+            }
+        }
+    }
+    
+    func clearPassword() {
+        codeNumber1 = ""
+        codeNumber2 = ""
+        codeNumber3 = ""
+        codeNumber4 = ""
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            withAnimation {
+                isFocused = .digit1
+                wipePassword = false
+            }
         }
     }
 
-    func getPassCode(text: Binding<String>, currentField: Field, nextField: Field? = nil, preField: Field? = nil) -> some View {
+    func getPassCode(text: Binding<String>,
+                     currentField: Field,
+                     nextField: Field? = nil,
+                     preField: Field? = nil) -> some View {
         return SecureField("", text: text)
             .fontWidth(.expanded)
             .frame(width: 50, height: 50)
